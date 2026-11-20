@@ -1,251 +1,386 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
 
+:root {
+	--font-primary: 'Montserrat', system-ui, sans-serif;
+	--font-secondary: 'Big Shoulders', system-ui, sans-serif;
+	--font-tertiary: 'Zalando Sans Expanded', system-ui, sans-serif;
+	--color1: #E5E4D6;
+	--color2: #1A0403;
+	--color3: #64120D;
+	--color4: #FFF1C9;
+	--color5: #2B0504;
+	--color6: #444444;
+}
+
 * {
-    margin : 0;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    color: #1A0403;
-    background-color: #E6E6E6;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--color1);
+	color: var(--color2);
+	font-family: var(--font-primary);
+	font-weight: 500;
 }
 
-a {
-    color: inherit;
-}
-
-img {
-    display: block;
-    grid-column: 1 / -1;
-    width: 100%;
-    max-width: 100%;
-    height: 70vh;
-    object-fit: cover;
-}
-
-h1 {
-    font-family: "Big Shoulders", sans-serif;
-    font-weight: 900;
-    letter-spacing: 0;
-}
-
-h2 {
-    font-family: "Zalando Sans Expanded", sans-serif;
-    font-weight: 800;
-    letter-spacing: 0.13em;
-    text-transform: uppercase;
-}
-
-h3 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
+main {
+	display: grid; 
+	flex-grow: 1;
+	grid-template-columns: 1fr 1fr;
 }
 
 header {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    column-gap: 2rem;
-    padding: 1rem 2rem;
-    background-color: #64120D;
-    color: #FFF1C9;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+	column-gap: 32px;
+	padding: 16px 32px;
+	background-color: var(--color3);
+	color: var(--color4);
 }
 
 header p {
-    font-weight: 300;
-    font-style: italic;
-    font-size: 0.75rem;
-    letter-spacing: 0.15em;
+	font-size: 12px;
+	font-weight: 300;
+	font-style: italic;
+	letter-spacing: 2px;
+}
+
+h1 {
+	font-family: var(--font-secondary);
+	font-weight: 900;
+	letter-spacing: 0;
+	text-transform: uppercase;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    line-height: 1;
+	line-height: 1;
+	font-size: 40px;
 }
 
 header hgroup p {
-    font-weight: 400;
-    font-style: normal;
-    font-size: 0.6rem;
-    letter-spacing: 0.33em;
-    text-transform: uppercase;
+	font-size: 10px;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: 3px;
+	text-transform: uppercase;
 }
 
 nav {
-    display: grid;
-    grid-auto-flow: column;
-    column-gap: 3rem;
+	display: grid;
+	grid-auto-flow: column;
+	column-gap: 48px;
 }
 
 nav a {
-    font-weight: 400;
-    font-size: 0.7rem;
-    letter-spacing: 0.21em;
-    text-transform: uppercase;
-    text-decoration: none;
+	color: inherit;
+	font-size: 11px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-decoration: none;
 }
 
 nav a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+
+main > img {
+	grid-column: 1 / -1;
+	display: block;
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
 }
+
 section {
-    grid-column: 1 / -1;
-    display: grid;
-    justify-items: center;
-    padding: 4rem 2rem 5rem;
-    text-align: center;
+	grid-column: 1 / -1;
+	display: grid;
+	justify-items: center;
+	padding: 64px 32px 80px;
+	text-align: center;
 }
 
 section hgroup p {
-    font-size: 0.65rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
+	font-size: 10px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
 }
 
 section h2 {
-    margin: 0.5rem 0 2rem;
-    font-size: 1.5rem;
+	margin: 8px 0 32px 0;
+	font-family: var(--font-tertiary);
+	font-size: 24px;
+	font-weight: 800;
+	letter-spacing: 3px;
+	text-transform: uppercase;
 }
 
 section p {
-    max-width: 50rem;
-    font-size: 0.7rem;
-    line-height: 1.6;
-    letter-spacing: 0.11em;
+	max-width: 800px;
+	font-size: 14px;
+	line-height: 1.6;
+	letter-spacing: 1px;
 }
+
 ol {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    width: 100%;
-    max-width: 60rem;
-    margin-top: 4rem;
-    list-style: none;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr ;
+	gap: 24px;
+	width: 100%;
+	max-width: 960px;
+	margin-top: 64px;
+	list-style: none;
 }
+
 li {
-    display: grid;
-    grid-template-rows: auto 15rem auto 1fr auto;
-    justify-items: center;
-    align-items: center;
+	display: grid;
+	grid-template-rows: auto 240px auto 1fr auto;
+	justify-items: center;
+	align-items: center;
 }
+
 li hgroup p {
-    font-weight: 500;
-    font-size: 0.75rem;
-    letter-spacing: 0.22em;
-    text-transform: none;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 3px;
+	text-transform: none;
 }
 
 li h3 {
-    margin-top: 0.75rem;
-    font-weight: 800;
-    font-size: 0.8rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
+	margin-top: 12px;
+	font-family: var(--font-primary);
+	font-size: 13px;
+	font-weight: 800;
+	letter-spacing: 3px;
+	text-transform: uppercase;
 }
 
 li img {
-    width: auto;
-    height: 11rem;
-    object-fit: contain;
+	display: block;
+	width: auto;
+	height: 176px;
+	object-fit: contain;
 }
 
 li h4 {
-    font-weight: 600;
-    font-size: 0.7rem;
+	font-size: 14px;
+	font-weight: 600;
 }
 
 li p {
-    align-self: start;
-    max-width: 14rem;
-    margin: 1rem 0 1.5rem;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: normal;
-    color: #444444;
+	align-self: start;
+	max-width: 224px;
+	margin: 16px 0 24px 0;
+	color: var(--color6);
+	font-weight: 400;
+	line-height: 1.5;
+	letter-spacing: normal;
 }
 
 li a {
-    width: 100%;
-    padding: 0.8rem 1rem;
-    background-color: #2B0504;
-    color: #FFF1C9;
-    font-weight: 600;
-    font-size: 0.7rem;
-    letter-spacing: 0;
-    text-transform: uppercase;
-    text-decoration: none;
+	width: 100%;
+	padding: 13px 16px;
+	background-color: var(--color5);
+	color: var(--color4);
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0;
+	text-transform: uppercase;
+	text-decoration: none;
 }
 
 li a:hover {
-    background-color: #64120D;
+	background-color: var(--color3);
 }
 
-article {
-    display: grid;
+main > article {
+	display: grid;
 }
 
-article img {
-    grid-area: 1 / 1;
-    height: 100%;
-    min-height: 28rem;
+main > article img {
+	grid-area: 1 / 1;
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: 448px;
+	object-fit: cover;
 }
 
-article h2 {
-    grid-area: 1 / 1;
-    align-self: center;
-    margin-left: 2rem;
-    font-size: 1.5rem;
-    color: #FFF1C9;
-    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
+main > article h2 {
+	grid-area: 1 / 1;
+	align-self: center;
+	justify-self: center; 
+	color: var(--color4);
+	font-family: var(--font-tertiary);
+	font-size: 40px;
+	font-weight: 800;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+
 }
 
 figure {
-    display: grid;
-    justify-items: center;
-    align-content: center;
-    gap: 1rem;
-    padding: 3rem;
-    background-color: #64120D;
-    color: #FFF1C9;
-    text-align: center;
+	display: grid;
+	justify-items: center;
+	align-content: center;
+	gap: 16px;
+	padding: 48px;
+	background-color: var(--color3);
+	color: var(--color4);
+	text-align: center;
 }
 
 figure img {
-    height: auto;
-    aspect-ratio: 3 / 4;
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 3 / 4;
+	object-fit: cover;
 }
 
 figcaption {
-    display: grid;
-    justify-items: center;
-    gap: 1rem;
+	display: grid;
+	justify-items: center;
+	gap: 16px;
 }
 
 figcaption p {
-    font-size: 0.65rem;
-    letter-spacing: 0.11em;
+	font-size: 14px;
+	letter-spacing: 1px;
 }
 
 figcaption a {
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+	color: inherit;
+	font-size: 10px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
 }
 
+main > section > article {
+	display: grid;
+	grid-template-columns: 1.1fr 0.9fr;
+	align-items: center; 
+	gap: 64px;
+	width: 100%; 
+	max-width: 1200px;
+	text-align: left;
+}
+
+main > section > article > figure {
+	display: grid ; 
+	justify-items: center; 
+	align-content: center; 
+	padding: 24px ; 
+	background-color: var(--color1); 
+	color: var(--color2) ; 
+}
+
+main > section > article > figure img {
+	display: block; 
+	width: 100%;
+	height: 420px; 
+	aspect-ratio: auto; 
+	object-fit: contain;
+}
+
+main > section > article > div {
+	display: grid ; 
+	grid-template-columns: 1fr; 
+	align-content: center ; 
+	justify-items: start ; 
+	gap: 24px ;
+
+}
+
+main > section > article > div hgroup {
+	display: grid ; 
+	gap: 8px ; 
+}
+
+main > section > article > div h2 {
+	margin: 0;
+	font-family: var(--font-tertiary);
+	font-size: 32px;
+	font-weight: 800; 
+	letter-spacing: 2px; 
+	text-transform: uppercase; 
+}
+
+main > section > article > div h3 {
+	font-size: 14px;
+	font-weight: 600;	
+}
+
+main > section > article > div p {
+	font-size: 14px;
+	line-height: 1.6;
+	letter-spacing: 0.5px; 
+}
+
+main > section > article > div button { 
+	width: 100%;
+	max-width: 360px ; 
+	padding: 16px; 
+	border: none;
+	background-color: var(--color5);
+	color: var(--color4);
+	font-family: var(--font-primary);
+	font-size: 11px;
+	font-weight: 600; 
+	letter-spacing: 2px ; 
+	text-transform: uppercase;
+} 
+
+main > section > article > div button:hover {
+	background-color: var(--color 3) ; 
+} 
+
 footer {
-    padding: 1.5rem 2rem;
-    background-color: #64120D;
-    color: #FFF1C9;
-    text-align: center;
-    font-weight: 400;
-    font-size: 0.65rem;
-    letter-spacing: 0.11em;
+	padding: 24px 32px;
+	background-color: var(--color3);
+	color: var(--color4);
+	text-align: center;
+	font-size: 10px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	width: 100%; 
+}
+
+@media (max-width: 900px) {
+	ol {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 600px) {
+	header {
+		grid-template-columns: 1fr;
+		justify-items: center;
+		row-gap: 12px;
+	}
+	nav {
+		column-gap: 24px;
+	}
+	main {
+		grid-template-columns: 1fr;
+	}
+	ol {
+		grid-template-columns: 1fr;
+		gap: 32px ; 
+	}
+
+	main > section > article {
+		grid-template-columns: 1fr; 
+		gap: 32px;
+	}
+
+	main > section > article > figure img {
+		height: 320px; 
+	}
 }
