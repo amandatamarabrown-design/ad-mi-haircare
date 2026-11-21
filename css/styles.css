@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+	--font-primary: 'Montserrat', system-ui, sans-serif;
+	--font-secondary: 'Big Shoulders', system-ui, sans-serif;
+	--font-tertiary: 'Zalando Sans Expanded', system-ui, sans-serif;
+	--font-mono: 'Ubuntu Sans Mono', monospace; 
+	--color1: #E5E4D6;
+	--color2: #1A0403;
+	--color3: #64120D;
+	--color4: #FFF1C9;
+	--color5: #2B0504;
+	--color6: #444444;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--color1);
+	color: var(--color2);
+	font-family: var(--font-primary);
+	font-weight: 500;
+}
+
+main {
+	display: grid; 
+	flex-grow: 1;
+	grid-template-columns: 1fr 1fr;
+}
+
+body > header {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+	column-gap: 32px;
+	padding: 16px 32px;
+	background-color: var(--color3);
+	color: var(--color4);
+}
+
+ body > header p {
+	font-size: 12px;
+	font-weight: 300;
+	font-style: italic;
+	letter-spacing: 2px;
+}
+
+h1 {
+	font-family: var(--font-secondary);
+	font-weight: 900;
+	letter-spacing: 0;
+	text-transform: uppercase;
+}
+
+
+body > header h1 {
+	line-height: 1;
+	font-size: 40px;
+}
+
+body > header hgroup p {
+	font-size: 10px;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: 6px;
+	text-transform: uppercase;
+}
+
+nav {
+	display: grid;
+	grid-auto-flow: column;
+	column-gap: 48px;
+}
+
+nav a {
+	color: inherit;
+	font-size: 11px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+/* Homepage - Hero */
+
+main > img {
+	grid-column: 1 / -1;
+	display: block;
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+}
+
+/* Hompage - Oyin Collection Intro Copy */
+
+section {
+	grid-column: 1 / -1;
+	display: grid;
+	justify-items: center;
+	padding: 64px 32px 80px;
+	text-align: center;
+}
+
+section hgroup p {
+	font-size: 10px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+section h2 {
+	margin: 8px 0 32px 0;
+	font-family: var(--font-tertiary);
+	font-size: 24px;
+	font-weight: 800;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: var(--color2)
+}
+
+section p {
+	max-width: 800px;
+	font-size: 14px;
+	line-height: 1.6;
+	letter-spacing: 1px;
+}
+
+/* Oyin Collection Product Grid */
+
+ol {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr ;
+	gap: 24px;
+	width: 100%;
+	max-width: 960px;
+	margin-top: 64px;
+	list-style: none;
+}
+
+li {
+	display: grid;
+	grid-template-rows: auto 240px auto 1fr auto;
+	justify-items: center;
+	align-items: center;
+}
+
+li hgroup p {
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 3px;
+	text-transform: none;
+}
+
+li h3 {
+	margin-top: 12px;
+	font-family: var(--font-primary);
+	font-size: 13px;
+	font-weight: 800;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+li img {
+	display: block;
+	width: auto;
+	height: 176px;
+	object-fit: contain;
+}
+
+li h4 {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+li p {
+	align-self: start;
+	max-width: 224px;
+	margin: 16px 0 24px 0;
+	color: var(--color6);
+	font-weight: 400;
+	line-height: 1.5;
+	letter-spacing: normal;
+}
+
+li a {
+	width: 100%;
+	padding: 13px 16px;
+	background-color: var(--color5);
+	color: var(--color4);
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+li a:hover {
+	background-color: var(--color3);
+}
+
+/* Homepage - Editorial Lookbook (Left Section) */
+
+main > article {
+	display: grid;
+}
+
+main > article img {
+	grid-area: 1 / 1;
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: 448px;
+	object-fit: cover;
+}
+
+main > article h2 {
+	grid-area: 1 / 1;
+	align-self: center;
+	justify-self: center; 
+	color: var(--color4);
+	font-family: var(--font-tertiary);
+	font-size: 40px;
+	font-weight: 800;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+
+}
+
+/* Homepage - Editorial Lookbook (Right Section) */
+
+figure {
+	display: grid;
+	justify-items: center;
+	align-content: center;
+	gap: 16px;
+	padding: 48px;
+	background-color: var(--color3);
+	color: var(--color4);
+	text-align: center;
+}
+
+figure img {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 3 / 4;
+	object-fit: cover;
+}
+
+figcaption {
+	display: grid;
+	justify-items: center;
+	gap: 16px;
+}
+
+figcaption p {
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+figcaption a {
+	color: inherit;
+	font-size: 10px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+/* PDP - Overall Structural Layout : (Image + Info) */
+
+main > section > article {
+	display: grid;
+	grid-template-columns: 1.1fr 0.9fr;
+	align-items: center; 
+	gap: 64px;
+	width: 100%; 
+	max-width: 1200px;
+	text-align: left;
+}
+
+/* PDP - Product Image */
+
+main > section > article > figure {
+	display: grid ; 
+	justify-items: center; 
+	align-content: center; 
+	padding: 24px ; 
+	background-color: var(--color1); 
+	color: var(--color2) ; 
+}
+
+main > section > article > figure img {
+	display: block; 
+	width: 100%;
+	height: 420px; 
+	aspect-ratio: auto; 
+	object-fit: contain;
+}
+
+/* PDP - Product Info Section */
+
+main > section > article > div {
+	display: grid ; 
+	grid-template-columns: 1fr ;  
+	gap: 32px;
+}
+
+/* PDP - Product Step */
+
+main > section > article > div > header {
+    display: grid;
+}
+
+main > section > article > div > header p {
+    font-family: var(--font-mono);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* PDP - Product Heading & Price  */
+
+main > section > article > div > div {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center; 
+	column-gap: 24px; 
+}
+
+/* PDP - Product Heading */
+
+main > section > article > div hgroup {
+	display: grid; 
+	gap: none; 
+}
+
+/* PDP - Product Price */
+
+main > section > article > div > div p {
+	font-size: 28px; 
+	text-align: right; 
+}
+
+/* PDP - Product Description */
+
+main > section > article > div > p {
+	font-size: 14px; 
+	line-height: 1.6;
+	letter-spacing: 0.5px;
+}
+
+/* PDP - Add to Cart Button */
+
+main > section > article > div button { 
+	width: 100%;
+	max-width: 360px ; 
+	padding: 16px; 
+	border: none;
+	background-color: var(--color5);
+	color: var(--color4);
+	font-family: var(--font-primary);
+	font-size: 11px;
+	font-weight: 600; 
+	letter-spacing: 2px ; 
+	text-transform: uppercase;
+} 
+
+main > section > article > div button:hover {
+	background-color: var(--color3) ; 
+} 
+
+/* Footer Section */
+
+footer {
+	padding: 15px;
+	background-color: var(--color3);
+	color: var(--color4);
+	text-align: center;
+	font-size: 10px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	width: 100%; 
+}
+
+/* Responsive Layouts */
+
+/* Desktop */
+@media (min-width: 901px) {
+    ol {
+        grid-template-columns: 1fr  1fr  1fr 1fr;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    body > header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        row-gap: 12px;
+    }
+
+    nav {
+        column-gap: 24px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    main > section > article {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    main > section > article > figure img {
+        height: 320px;
+    }
+
+    ol {
+        gap: 32px;
+    }
+}
